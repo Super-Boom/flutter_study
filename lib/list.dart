@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/animateTest.dart';
+import 'package:flutter_study/navigatePageByName.dart';
 class MainPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -36,6 +37,13 @@ class ListPage extends StatelessWidget{
             leading: Icon(Icons.phone),
             title: Text('在同一个页面中导航'),
           ),
+          ListTile(
+            leading: Icon(Icons.add_circle),
+            title: Text('命名导航'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>FirstScreen()));
+            },
+          )
         ],
       ),
     );
