@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/animateTest.dart';
 import 'package:flutter_study/navigatePageByName.dart';
 import 'package:flutter_study/PhysicsCardDragDemo.dart';
+import 'package:flutter_study/animatePropertiesOfAContainer.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -52,6 +53,14 @@ class ListPage extends StatelessWidget {
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => PhysicsCardDragDemoPage()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.beach_access),
+            title: Text('属性动画'),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AnimatedContainerApp()));
             },
           )
         ],
